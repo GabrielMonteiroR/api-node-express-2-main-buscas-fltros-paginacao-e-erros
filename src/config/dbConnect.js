@@ -1,6 +1,10 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
+import dotenv from 'dotenv';
+dotenv.config();
 
-mongoose.connect("mongodb+srv://alura:123@alura.dkjed.mongodb.net/alura-node");
+
+// eslint-disable-next-line no-undef
+mongoose.connect(process.env.STRING_CONEXAO_DB);
 
 let db = mongoose.connection;
 
